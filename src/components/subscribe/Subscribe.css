@@ -15,21 +15,38 @@ section#subscribe {
   padding-bottom: 1rem;
 }
 
-form > * {
+form>* {
   width: 100%;
   max-width: 50rem;
   margin: 3rem auto;
 }
 
+.header>h2 {
+  font-size: 4rem;
+}
+
 form input {
+  border: none;
+  background-color: #fff;
+  border-radius: 0;
+  color: #111;
   padding: 1rem;
-  background: transparent;
-  border: 1px solid #777;
-  border-radius: 5px 0 0 5px;
-  color: #fff;
-  outline: none;
   width: 80%;
-  font-size: 1.6rem;
+}
+
+.form-control {
+  display: flex;
+}
+
+
+.search__icon {
+  display: inline;
+  background-color: #fff;
+  color: #111;
+  padding: 1.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form button {
@@ -40,6 +57,17 @@ form button {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+.services__link a {
+  cursor: pointer;
+  text-decoration: underline #f5f3f3;
+  text-underline-offset: 2px;
+}
+
+.services__link a:hover {
+  text-decoration: underline orangered;
+  text-underline-offset: 2px;
 }
 
 .social-icons {
@@ -65,6 +93,7 @@ form button {
 
 .social-icon:hover {
   background: var(--light-blue);
+  border-color: var(--light-blue);
 }
 
 @media screen and (max-width: 600px) {

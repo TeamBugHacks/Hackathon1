@@ -25,25 +25,43 @@
 .nav-links {
   display: flex;
   color: #fff;
+  align-items: center;
+  gap: 1rem;
+
 }
 
 .nav-links li {
   margin-left: 10px;
   list-style: none;
+  outline: none;
+  border: none;
 }
 
 .nav-links a {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
   color: #fff;
   text-decoration: none;
-  margin-right: 1rem;
   transition: all 0.3s;
+  opacity: .8;
 }
+
+.nav-links li:first-child a {
+  font-weight: 600;
+  opacity: 1;
+}
+
 .nav-links a:hover,
 #nav-links-mobile a:hover {
   color: orangered;
 }
+
+.nav-links a:focus,
+#nav-links-mobile a:focus {
+  outline: none;
+}
+
 
 /* a.btn {
   border-radius: 5px;
@@ -70,12 +88,15 @@ a.btn-light {
 
 /* Media Queries */
 @media screen and (max-width: 769px) {
+
   /* hide nav button on navbar */
   .nav-btn {
     display: none;
   }
 }
+
 @media screen and (max-width: 600px) {
+
   /* show nav button on navbar menu */
   .nav-btn {
     display: block;
@@ -113,10 +134,12 @@ a.btn-light {
     left: -100%;
     animation: slide-out 0.5s ease-in-out;
   }
+
   @keyframes slide-out {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-100%);
     }
@@ -126,6 +149,7 @@ a.btn-light {
     0% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(0);
     }

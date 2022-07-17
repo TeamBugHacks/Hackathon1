@@ -1,6 +1,31 @@
 .header-bg {
   width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  background: #0a1930;
+  height: 75vh;
+  background: url(./assets/subscribe1-bg.png);
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.takeBackToTop {
+  background-color: #fff;
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  box-shadow: 0 4px 12px #3133351a;
+  display: inline-flex;
+  padding: .45rem;
+  font-size: 1.25rem;
+  border-radius: .15rem;
+  color: #1b1f22;
+  z-index: 1000;
+  opacity: .9;
+  transition: .4s;
+}
+
+.takeBackToTop:hover {
+  transform: translateY(-.25rem);
+  opacity: 1;
 }
