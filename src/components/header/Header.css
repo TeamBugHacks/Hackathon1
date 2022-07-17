@@ -1,0 +1,51 @@
+section#header{
+  background: url(../../assets/subscribe1-bg.png);
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.subscribe h2 {
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+}
+
+form > * {
+  width: 100%;
+  max-width: 50rem;
+  margin: 3rem auto;
+}
+
+form input {
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid #777;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+  outline: none;
+  width: 80%;
+  font-size: 1.6rem;
+}
+
+form button {
+  padding: 1rem;
+  background: var(--form-button);
+  border: 1px solid var(--form-button);
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 6000px) {
+  form input {
+    width: 60%;
+    height: 10;
+  }
+}
