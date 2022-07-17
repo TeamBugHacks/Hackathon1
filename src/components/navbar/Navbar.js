@@ -4,8 +4,8 @@ import { RiCloseLine } from "react-icons/ri";
 import { SiAnaconda } from "react-icons/si";
 import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
-
 import "./Navbar.css";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar container">
       <div className="logo">
-        <img src="/assets/logo.png" alt="logo"></img>
+        <img src={logo} alt="logo"/>
       </div>
       <menu>
         <ul
