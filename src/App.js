@@ -1,5 +1,6 @@
 import "./App.css";
 import { useRef, useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   Navbar,
@@ -11,6 +12,8 @@ import {
   Footer,
 } from "./components";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { Landing } from "./components/Landing/Landing";
+import { Cart } from "./components/Cart/Cart";
 
 function App() {
   const scrollToTop = () => {
@@ -38,24 +41,37 @@ function App() {
 
   return (
     <>
-      <header className="header-bg">
-        <Navbar />
-        <Header />
-      </header>
-      <Features data-aos="fade-up" />
-      <Download />
-      <Subscribe />
-      <Faq />
-      <Footer />
-      {isVisible && (
-        <div className="takeBackToTop">
-          <ArrowUpwardIcon
-            onClick={scrollToTop}
-            font-size="small"
-            sx={{ height: "25px", width: "30px" }}
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Landing />} />
+          <Route
+            path="/services"
+            element={
+              <>
+                <header className="header-bg">
+                  <Navbar />
+                  <Header />
+                </header>
+                <Features data-aos="fade-up" />
+                <Download />
+                <Subscribe />
+                <Faq />
+                <Footer />
+                {isVisible && (
+                  <div className="takeBackToTop">
+                    <ArrowUpwardIcon
+                      onClick={scrollToTop}
+                      font-size="small"
+                      sx={{ height: "25px", width: "30px" }}
+                    />
+                  </div>
+                )}
+              </>
+            }
           />
-        </div>
-      )}
+          <Route path='/cart' element={<Cart/>}/>
+        </Routes>
+      </Router>
     </>
   );
 }
