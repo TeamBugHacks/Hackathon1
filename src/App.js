@@ -32,7 +32,7 @@ function App() {
       document.body.scrollTop || document.documentElement.scrollTop;
 
     if (winScroll > 40) {
-      !isVisible && // to limit setting state only the first time
+      !isVisible &&
         setIsVisible(true);
     } else {
       setIsVisible(false);
