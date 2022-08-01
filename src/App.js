@@ -14,6 +14,8 @@ import {
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Landing } from "./components/Landing/Landing";
 import { Cart } from "./components/Cart/Cart";
+import AdminLogin from "./components/Admin/AdminLogin";
+import AdminDashboard from "./components/Admin/AdminDashboard";
 
 function App() {
   const scrollToTop = () => {
@@ -70,6 +72,8 @@ function App() {
             }
           />
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/admin-login' element={<AdminLogin/>}/>
+          <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
         </Routes>
       </Router>
     </>
