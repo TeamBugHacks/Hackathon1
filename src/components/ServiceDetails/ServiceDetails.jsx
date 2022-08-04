@@ -1,31 +1,25 @@
-import WebIcon from "@mui/icons-material/Web";
+import "./ServiceDetails.css";
 
-const ServiceDetails = () => {
+const ServiceDetails = ({ logo, icon, title, description, img, sublist }) => {
   return (
     <div className="serviceDetails">
       <nav className="nav">
-        <div className="logo">Web</div>
+        <div className="logo">{logo}</div>
       </nav>
       <hr />
 
       <main className="main">
         <div className="main__content">
           <div className="chip">
-            <WebIcon />
-            Web
+            {icon}
+            {logo}
           </div>
-          <h2 className="main__title">Web services at its peek.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-            cumque possimus nisi.
-          </p>
+          <h2 className="main__title">{title}</h2>
+          <p>{description}</p>
         </div>
 
         <main className="img">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80"
-            alt=""
-          />
+          <img src={img} alt={logo} />
         </main>
       </main>
 

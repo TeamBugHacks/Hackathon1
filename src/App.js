@@ -82,7 +82,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
-          <Route path='/service' element={<ServiceDetails/>}/>
+          <Route path='/servicesdetails' element={<ServiceDetails/>}/>
           <Route path='/logo-making' element={<LogoDetails/>}/>
           <Route path='/content-writing' element={<ContentDetails/>}/>
           <Route path='/digital-marketing' element={<DigitalDetails/>}/>
