@@ -82,14 +82,6 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
-          <Route path='/service' element={<ServiceDetails/>}/>
-          <Route path='/logo-making' element={<LogoDetails/>}/>
-          <Route path='/content-writing' element={<ContentDetails/>}/>
-          <Route path='/digital-marketing' element={<DigitalDetails/>}/>
-          <Route path='/website-designing' element={<WebsiteDetails/>}/>
-          <Route path='/mobile-application' element={<MobileDetails/>}/>
-          <Route path='/signin-page' element={<SignDetails/>}/>
-          <Route path='/add-products' element={<AddDetails/>}/>
         </Routes>
       </Router>
     </>
