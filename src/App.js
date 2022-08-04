@@ -75,7 +75,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
-          <Route path='/service/:id' element={<ServiceDetails/>}/>
+          <Route path='/servicedetails' element={<ServiceDetails/>}/>
         </Routes>
       </Router>
     </>
