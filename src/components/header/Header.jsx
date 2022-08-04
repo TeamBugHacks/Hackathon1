@@ -31,10 +31,11 @@ const Header = () => {
           </form>
         </div>
         <div className="services__link">
-          <a>Logo making,</a>
-          <a>Digital marketing,</a>
-          <a>Website designing,</a>
-          <a>etc.</a>
+        <a href="/logo-making"> Logo making</a>
+        <a href="/content-writing"> Content Writing</a>
+        <a href="/digital-marketing"> Digit Marketing</a>
+        <a href="/logo-making"> Logo making</a>
+        <a href="/webiste-designing"> Website designing</a>
         </div>
       </section>
 
@@ -44,28 +45,28 @@ const Header = () => {
             src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
             alt=""
           />
-          <span>Web</span>
+        <a href="/logo-making">Logo making</a>
         </div>
         <div className="services__item">
           <img
             src="https://cdn-icons-png.flaticon.com/512/38/38002.png"
             alt=""
           />
-          <span>App</span>
+        <a href="/mobile-application">Mobile Application</a>
         </div>
         <div className="services__item">
           <img
             src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
             alt=""
           />
-          <span>content writing</span>
+          <span>Content Writing</span>
         </div>
         <div className="services__item">
           <img
             src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
             alt=""
           />
-          <span>content writing</span>
+          <span>Logo Making</span>
         </div>
         <div className="services__item">
           <img

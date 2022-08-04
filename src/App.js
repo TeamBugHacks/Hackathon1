@@ -17,6 +17,13 @@ import { Cart } from "./components/Cart/Cart";
 import AdminLogin from "./components/Admin/AdminLogin";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import ContentDetails from "./components/ContentDetails/ContentDetails";
+import LogoDetails from "./components/LogoDetails/LogoDetails";
+import DigitalDetails from "./components/DigitalDetails/DigitalDetails";
+import WebsiteDetails from "./components/WebsiteDetails/WebsiteDetails";
+import MobileDetails from "./components/MobileDetails/MobileDetails";
+import SignDetails from "./components/SignDetails/SignDetails";
+import AddDetails from "./components/AddDetails/AddDetails";
 
 function App() {
   const scrollToTop = () => {
@@ -75,7 +82,6 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
-          <Route path='/servicedetails' element={<ServiceDetails/>}/>
         </Routes>
       </Router>
     </>
