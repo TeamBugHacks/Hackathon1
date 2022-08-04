@@ -3,8 +3,9 @@ import "firebase/compat/firestore";
 import "firebase/compat/storage";
 import 'firebase/compat/auth'
 
+
 export const firebaseConfig = firebase.initializeApp({
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyAL0c3QplzTTpLGtkrMBn9T3J4qVE6ZRrg",
   authDomain: "hackathon-6cb89.firebaseapp.com",
   projectId: "hackathon-6cb89",
   storageBucket: "hackathon-6cb89.appspot.com",
