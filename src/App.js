@@ -1,7 +1,6 @@
 import "./App.css";
 import { useRef, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import {
   Navbar,
   Header,
@@ -25,6 +24,7 @@ import MobileDetails from "./components/MobileDetails/MobileDetails";
 import { Signup } from "./components/Signup";
 import { Login } from "./components/Login";
 import {auth, db} from "./firebase/config";
+import {useStateValue} from './components/Cart/cartProvider'
 
 // export class App extends Component {
 
@@ -50,6 +50,29 @@ import {auth, db} from "./firebase/config";
 //   }
 
 function App() {
+  const [{cart}, dispatch] = useStateValue()
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if(user){
+        dispatch({
+          type: "SET_USER",
+          user: user
+        })
+      }else{
+        dispatch({
+          type: "SET_USER",
+          user: null
+        })
+      }
+    })
+
+    return () => {
+      unsubscribe()
+    }
+
+  }, [])  
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };

@@ -6,7 +6,8 @@ import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,7 +32,9 @@ const Navbar = () => {
             <a href="#features">Features</a>
           </li>
           <li>
-            <Link to='/' className='navlinks'>Log Out</Link>
+            <Link to="/" className="navlinks">
+              Log Out
+            </Link>
           </li>
           {/* <li>
             <a href="#" className="btn btn-dark">
@@ -39,7 +42,7 @@ const Navbar = () => {
             </a>
           </li> */}
           <li className="nav-btn">
-            <Button text={"Learn More"} btnClass={"btn-dark"} href={"#faq"} />
+            <Cart />
           </li>
         </ul>
       </menu>

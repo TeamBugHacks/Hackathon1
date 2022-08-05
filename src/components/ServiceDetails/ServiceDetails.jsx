@@ -1,35 +1,16 @@
 import "./ServiceDetails.css";
 import { Badge, Button } from "@mui/material";
-import { styled } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
+import Cart from "../Cart/Cart";
 
 // custom badge
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  "& .MuiBadge-badge": {
-    right: -3,
-    top: 13,
-    border: `2px solid ${theme.palette.background.paper}`,
-    padding: "0 4px",
-  },
-}));
 
 const ServiceDetails = ({ logo, icon, title, description, img, sublist }) => {
   return (
     <div className="serviceDetails">
       <nav className="nav">
         <div className="logo">{logo}</div>
-        <IconButton aria-label="cart">
-          <StyledBadge
-            fontSize="small"
-            badgeContent={0}
-            showZero
-            color="primary"
-          >
-            <ShoppingCartIcon fontSize="large" />
-          </StyledBadge>
-        </IconButton>
+        <Cart />
       </nav>
       <hr />
 
