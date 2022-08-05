@@ -1,9 +1,23 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
-
+import Chip from "@mui/material/Chip";
+import FaceIcon from "@mui/icons-material/Face";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SearchIcon from "@mui/icons-material/Search";
+import { Stack, Autocomplete, TextField } from "@mui/material";
+
+const services = [
+  "Web dev",
+  "App dev",
+  "Digital Marketing",
+  "Logo Making",
+  "Content writing",
+];
+const servicesOptions = services.map((service, index) => ({
+  id: index + 1,
+  label: service,
+}));
 
 const Header = () => {
   useEffect(() => {
@@ -11,76 +25,129 @@ const Header = () => {
       duration: 1000,
     });
   }, []);
+
+  const [value, setValue] = useState(null);
+  const [service, setService] = useState(null);
+  const navigate = useNavigate();
   return (
     <>
       <section id="header">
         <div className="container header" data-aos="fade-up">
           <h2>IT services, on demand.</h2>
           <form>
-            <div className="form-control">
-              <div className="search__icon">
-                <SearchIcon sx={{ height: "20px", width: "20px" }} />
-              </div>
-              <input
-                type="text"
-                placeholder="Search any IT service"
-                className="service__input"
-              />
-              <button className="service__btn">Search</button>
-            </div>
+            <Autocomplete
+              options={servicesOptions}
+              renderInput={(params) => (
+                <TextField
+                  color="primary"
+                  variant="filled"
+                  {...params}
+                  label="Services"
+                  sx={{ backgroundColor: "#eee", '&:hover':{
+                    backgroundColor: '#fff'
+                  },
+                  transition: '.3s ease-in'
+                 }}
+                />
+              )}
+              value={service}
+              onChange={(e, newValue) => {
+                setService(newValue);
+                navigate("/website-designing");
+              }}
+            />
           </form>
         </div>
         <div className="services__link">
-          <a href="/logo-making"> Logo making</a>
-          <a href="/content-writing"> Content Writing</a>
-          <a href="/digital-marketing"> Digit Marketing</a>
-          <a href="/logo-making"> Logo making</a>
-          <a href="/website-designing"> Website designing</a>
+          <Stack direction="row" spacing={1}>
+            <Link to="/logo-making">
+              <Chip
+                sx={{ cursor: "pointer" }}
+                label="Logo Making"
+                variant="contained"
+                color="primary"
+              />
+            </Link>
+            <Link to="/website-designing">
+              <Chip
+                sx={{ cursor: "pointer" }}
+                label="Web designing"
+                variant="contained"
+                color="primary"
+              />
+            </Link>
+            <Link to="/mobile-application">
+              <Chip
+                sx={{ cursor: "pointer" }}
+                label="App dev"
+                variant="contained"
+                color="primary"
+              />
+            </Link>
+            <Link to="/content-writing">
+              <Chip
+                sx={{ cursor: "pointer" }}
+                label="Content writing"
+                variant="contained"
+                color="primary"
+              />
+            </Link>
+            <Link to="/digital-marketing">
+              <Chip
+                label="Digital marketing"
+                variant="contained"
+                color="primary"
+              />
+            </Link>
+          </Stack>
         </div>
       </section>
 
       <div className="services__container">
         <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
-            alt=""
-          />
-          <a href="/logo-making">Logo making</a>
+          <Link to="/website-designing">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
+              alt=""
+            />
+            <span>Logo making</span>
+          </Link>
         </div>
         <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/38/38002.png"
-            alt=""
-          />
-          <a href="/mobile-application">Mobile Application</a>
+          <Link to="/logo-making">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
+              alt=""
+            />
+            <span>Logo making</span>
+          </Link>
         </div>
         <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
-            alt=""
-          />
-          <span>Content Writing</span>
+          <Link to="/mobile-application">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
+              alt=""
+            />
+            <span>App dev</span>
+          </Link>
         </div>
         <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
-            alt=""
-          />
-          <span>Logo Making</span>
+          <Link to="/content-writing">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
+              alt=""
+            />
+            <span>Content Writing</span>
+          </Link>
         </div>
         <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
-            alt=""
-          />
-          <span>content writing</span>
-        </div>
-        <div className="services__item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/684/684831.png"
-            alt=""
-          />
-          <span>content writing</span>
+          <Link to="/digital-marketing">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1231/1231223.png"
+              alt=""
+            />
+            <span>Digital marketing</span>
+          </Link>
         </div>
       </div>
     </>

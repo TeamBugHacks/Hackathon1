@@ -1,9 +1,11 @@
 section#header {
-  background: url(../../assets/subscribe1-bg.png);
   text-align: center;
-  color: #fff;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribe h2 {
@@ -82,14 +84,13 @@ form button {
 .services__link a {
   font-size: 10px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   margin-right: 1rem;
   transition: all 0.3s;
 }
 
 
-.services__item>img {
+.services__item img {
   width: 3rem;
 }
 
