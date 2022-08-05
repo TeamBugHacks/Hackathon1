@@ -15,7 +15,7 @@ const Download = () => {
   return (
     <section id="download">
       <div className="container download" data-aos="fade-up">
-        <h2>Japan chala jaunga is available for the following platforms.</h2>
+        <h2>Delta IT service is available for the following platforms.</h2>
         <p className="u-text-small">
           Our apps are available for download on all stores.
         </p>

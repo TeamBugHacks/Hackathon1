@@ -19,9 +19,9 @@ const Features = () => {
       <div className="container features">
         <div className="title" data-aos="fade-up">
           <BsFillBookmarkStarFill color="orangered" size={30} />
-          <h2>Why Japan chala jaunga?</h2>
+          <h2>Why Delta IT services?</h2>
           <p className="u-text-small">
-            Japan chala jaunga is primarily focused on delivering high end IT solutions and services like Digital Marketing, Logo making and creatives designing, Mobile application development and much more.
+            Delta IT services is primarily focused on delivering high end IT solutions and services like Digital Marketing, Logo making and creatives designing, Mobile application development and much more.
           </p>
         </div>
         <div className="features-content">

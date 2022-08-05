@@ -43,16 +43,16 @@ const Footer = () => {
               <FaPhoneAlt /> &nbsp; Phone: +91 1122334455.
             </p>
             <p>
-              <FaEnvelope /> &nbsp; Email: info@japanchalajaunga.in
+              <FaEnvelope /> &nbsp; Email: info@deltaitservice.in
             </p>
             <p>
-              <FaGlobe /> &nbsp; Website: www.japanchalajaunga.in
+              <FaGlobe /> &nbsp; Website: www.deltaitservice.in
             </p>
           </div>
         </div>
         <div className="footer-box">
-          <img src={logo} alt="logo" />
-          <p className="u-text-small">&copy; Copyright 2022. Japan chala jaunga India Pvt Ltd.
+          {/* <img src={logo} alt="logo" /> */}
+          <p className="u-text-small">&copy; Copyright 2022. Delta IT services India Pvt Ltd.
 
 </p>
         </div>

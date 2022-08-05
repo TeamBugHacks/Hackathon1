@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar container">
       <div className="logo">
-        <img src={logo} alt="logo"/>
+        <h2>Logo</h2>
       </div>
       <menu>
         <ul
@@ -31,10 +31,7 @@ const Navbar = () => {
             <a href="#features">Features</a>
           </li>
           <li>
-            <Link to='/log-in' className='navlinks'>Sign in</Link>
-          </li>
-          <li>
-            <Link to='/sign-up' className='navlinks'>Sign Up</Link>
+            <Link to='/' className='navlinks'>Log Out</Link>
           </li>
           {/* <li>
             <a href="#" className="btn btn-dark">
