@@ -1,8 +1,9 @@
 import "./ServiceDetails.css";
-import { Badge } from "@mui/material";
+import { Badge, Button } from "@mui/material";
 import { styled } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
 
 // custom badge
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -40,6 +41,15 @@ const ServiceDetails = ({ logo, icon, title, description, img, sublist }) => {
           </div>
           <h2 className="main__title">{title}</h2>
           <p>{description}</p>
+          <Button
+            variant="contained"
+            size="medium"
+            endIcon={<AddShoppingCartRoundedIcon />}
+            elevation={2}
+            sx={{ width: "13rem" }}
+          >
+            Add to cart
+          </Button>
         </div>
 
         <main className="img">

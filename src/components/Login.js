@@ -129,15 +129,6 @@ export const Login = (props) => {
           >
             Sign In
           </Button>
-          {/* <Button
-              onClick={signup}
-              variant="contained"
-              fullWidth
-              sx={{ fontSize: "1.5rem" }}
-              size="large"
-            >
-              Create Account
-            </Button> */}
         </Stack>
 
         <span>
