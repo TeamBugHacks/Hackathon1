@@ -19,7 +19,7 @@ const Faq = () => {
           <MdOutlineLibraryBooks color="orangered" size={30} />
           <h2>FAQs</h2>
           <p className="u-text-small">
-            Common questions asked by the people related to japan chala jaunga.
+            Common questions asked by the people related to Delta IT services.
           </p>
         </div>
         <div className="questions">

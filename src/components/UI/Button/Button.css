@@ -1,15 +1,12 @@
 a {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 300;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   margin-right: 1rem;
   transition: all 0.3s;
 }
-a:hover,
-#nav-links-mobile a:hover {
-  color: orangered;
-}
+
 a.btn {
   border-radius: 5px;
   padding: 5px 8px;
