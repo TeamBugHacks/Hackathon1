@@ -6,6 +6,7 @@ import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -30,12 +31,11 @@ const Navbar = () => {
             <a href="#features">Features</a>
           </li>
           <li>
-            <a href="#download">Register as a professional</a>
+            <Link to='/log-in' className='navlinks'>Sign in</Link>
           </li>
           <li>
-            <a href="#subscribe">Login/Sign in</a>
+            <Link to='/sign-up' className='navlinks'>Sign Up</Link>
           </li>
-
           {/* <li>
             <a href="#" className="btn btn-dark">
               Get Started

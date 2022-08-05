@@ -22,8 +22,32 @@ import LogoDetails from "./components/LogoDetails/LogoDetails";
 import DigitalDetails from "./components/DigitalDetails/DigitalDetails";
 import WebsiteDetails from "./components/WebsiteDetails/WebsiteDetails";
 import MobileDetails from "./components/MobileDetails/MobileDetails";
-import SignDetails from "./components/SignDetails/SignDetails";
-import AddDetails from "./components/AddDetails/AddDetails";
+import { Signup } from "./components/Signup";
+import { Login } from "./components/Login";
+import {auth, db} from "./firebase/config";
+
+// export class App extends Component {
+
+//   state-{
+//     user: null
+//   }
+
+//   componentDidMount(){
+//     auth.onAuthStatechanged(user->{
+//       if(user){
+//         db.collection('SignedUpUsersData').doc(user.uid).get().then(snapshot->{
+//           this.setState({
+//             user: snapshot.data().Name
+//           })
+//         })
+//       }
+//       else{
+//         this.setState({
+//           user: null
+//         })
+//       }
+//     })
+//   }
 
 function App() {
   const scrollToTop = () => {
@@ -53,7 +77,6 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" exact element={<Landing />} />
           <Route
             path="/services"
             element={
@@ -79,6 +102,7 @@ function App() {
               </>
             }
           />
+          <Route path='/' element={<Login/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
@@ -88,8 +112,7 @@ function App() {
           <Route path='/digital-marketing' element={<DigitalDetails/>}/>
           <Route path='/website-designing' element={<WebsiteDetails/>}/>
           <Route path='/mobile-application' element={<MobileDetails/>}/>
-          <Route path='/signin-page' element={<SignDetails/>}/>
-          <Route path='/add-products' element={<AddDetails/>}/>
+          <Route path='/sign-up' element={<Signup/>}/>
         </Routes>
       </Router>
     </>
